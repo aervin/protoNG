@@ -1,0 +1,239 @@
+{
+    "contractors": [
+        {
+            "id": 1,
+            "BusinessName": "Poullard's Delivery Service",
+            "Gross": 4214.37,
+            "Net": 3673.28,
+            "Deductions": 391.79,
+            "RouteCount": 2
+        },
+        {
+            "id": 2,
+            "BusinessName": "Zilencio",
+            "Gross": 4069.38,
+            "Net": 3353.79,
+            "Deductions": 613.34,
+            "RouteCount": 3
+        },
+        {
+            "id": 3,
+            "BusinessName": "Orbixtar",
+            "Gross": 4066.76,
+            "Net": 3578.68,
+            "Deductions": 411.48,
+            "RouteCount": 4
+        },
+        {
+            "id": 4,
+            "BusinessName": "Acusage",
+            "Gross": 4244.9,
+            "Net": 3510.26,
+            "Deductions": 308.91,
+            "RouteCount": 2
+        },
+        {
+            "id": 5,
+            "BusinessName": "Quarex",
+            "Gross": 4763.3,
+            "Net": 3943.61,
+            "Deductions": 689.82,
+            "RouteCount": 3
+        },
+        {
+            "id": 6,
+            "BusinessName": "Quarx",
+            "Gross": 4618.9,
+            "Net": 2949.52,
+            "Deductions": 563.9,
+            "RouteCount": 5
+        },
+        {
+            "id": 7,
+            "BusinessName": "Otherside",
+            "Gross": 4774.04,
+            "Net": 3372.63,
+            "Deductions": 301.82,
+            "RouteCount": 2
+        },
+        {
+            "id": 8,
+            "BusinessName": "Ecrater",
+            "Gross": 4287.36,
+            "Net": 2523.81,
+            "Deductions": 683.84,
+            "RouteCount": 2
+        },
+        {
+            "id": 9,
+            "BusinessName": "Tripsch",
+            "Gross": 4115.71,
+            "Net": 3791.44,
+            "Deductions": 441.44,
+            "RouteCount": 3
+        },
+        {
+            "id": 10,
+            "BusinessName": "Verton",
+            "Gross": 4656.54,
+            "Net": 2884.7,
+            "Deductions": 402.38,
+            "RouteCount": 3
+        }
+    ],
+
+    "contractorData": [
+        {
+            "id": 1,
+            "BusinessName": "Poullard's Delivery, LLC",
+            "WeekEnding": 20170812,
+            "PayDate": 20170825,
+            "DateKeys": [
+                20170806,
+                20170807,
+                20170808,
+                20170809,
+                20170810,
+                20170811,
+                20170812
+            ],
+            "Gross": {
+                "GrossTotal": 10455.81,
+                "Locations": [
+                    {
+                        "LocationName": "Lafayette LA",
+                        "LocationDivision": "Conn's",
+                        "Drivers": [
+                            {
+                                "DriverName": "Deandre Tolliver",
+                                "OtherEarnings": 0,
+                                "Routes": [
+                                    595.2,
+                                    576.5,
+                                    402.54,
+                                    null,
+                                    null,
+                                    null,
+                                    690.81
+                                ],
+                                "TotalEarnings": 2265.05
+                            },            
+                            {
+                                "DriverName": "Ethan Russell",
+                                "OtherEarnings": 1.00,
+                                "Routes": [
+                                    606.71,
+                                    389.89,
+                                    null,
+                                    null,
+                                    639.89,
+                                    679.03,
+                                    446.25
+                                ],
+                                "TotalEarnings": 2761.77
+                            },        
+                            {
+                                "DriverName": "Jacque Pierre",
+                                "OtherEarnings": 0,
+                                "Routes": [
+                                    671.22,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "TotalEarnings": 671.22
+                            },
+                            {
+                                "DriverName": "Ladre Roberts",
+                                "OtherEarnings": 2.00,
+                                "Routes": [
+                                    null,
+                                    null,
+                                    273.97,
+                                    538.15,
+                                    null,
+                                    null,
+                                    500.71
+                                ],
+                                "TotalEarnings": 1312.83
+                            },
+                            {
+                                "DriverName": "Torie Andre Arclese",
+                                "OtherEarnings": 1.00,
+                                "Routes": [
+                                    null,
+                                    484.3,
+                                    620.90,
+                                    688.05,
+                                    556.59,
+                                    584.31,
+                                    506.79
+                                ],
+                                "TotalEarnings": 3440.94
+                            }
+                        ]
+                    }
+                ],
+                "GrossTotals": [ 
+                    1873.13, 1450.69, 1297.41, 1226.2, 1196.48, 1263.34, 2144.56, 4.00
+                ]
+            },
+            "Deductions": {
+                "DeductionsTotal": 2563.79,
+                "TruckDeductionsTotal": 1991.27,
+                "OtherDeductionsTotal": 572.52,
+                "TruckDeductions": [
+                    {
+                        "DeductionType": "Enterprise - 1FVACWDT1GHGY5552",
+                        "Explanation": "08/04 - 08/11",
+                        "DeductionAmount": 407.42
+                    },
+                    {
+                        "DeductionType": "Enterprise - 3HAMMMML8JL632939",
+                        "Explanation": "08/04 - 08/11",
+                        "DeductionAmount": 537.04
+                    },
+                    {
+                        "DeductionType": "Enterprise - 3HAMMMML0JL539400",
+                        "Explanation": "08/04 - 08/11",
+                        "DeductionAmount": 478.97
+                    },
+                    {
+                        "DeductionType": "Enterprise - 3HAMMAAL3FL621132",
+                        "Explanation": "08/04 - 08/11",
+                        "DeductionAmount": 567.84
+                    }
+                
+                ],
+                "OtherDeductions": [
+                    {
+                        "DeductionType": "Insurance",
+                        "Explanation": "July payment 2 of 4",
+                        "DeductionAmount": 177.52
+                    },
+                    {
+                        "DeductionType": "Technology fee",
+                        "Explanation": "19 routes @ $5/route",
+                        "DeductionAmount": 95.00
+                    },
+                    {
+                        "DeductionType": "Merchandise claims",
+                        "Explanation": "Claim #0001",
+                        "DeductionAmount": 300
+                    }
+                ]
+            },
+            "Debt": {
+                "DeductionType": "Payback towards outstanding balance*",
+                "Explanation": "9 weeks left at this pace ($10,437 outstanding)",
+                "DeductionAmount": 2333.79
+            },
+            "Disclaimer": "Based on 19 routes and 3,502 miles, using $260/route for labor cost, local fuel prices, 13 cents per miles for maintenance costs, $75 a route for truck rental, $50 a route for insurance coverage, this payback amount should allow for sufficient operating cash flow, plus a small profit margin.",
+            "DebtTotal": 10437.49,
+            "NetEarnings": 8122.02
+        }
+    ]
+}

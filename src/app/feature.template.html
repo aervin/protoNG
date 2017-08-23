@@ -1,0 +1,81 @@
+<div class="settlements__wrapper-header">
+    <h1>Settlements</h1>
+</div>
+
+<div class="settlements__wrapper-workspace">
+    <div class="settlements__wrapper-timespans">
+        <button (click)="updateTimespan(20170729)">7/29</button>
+        <button (click)="updateTimespan(20170805)">8/05</button>
+        <button (click)="updateTimespan(20170812)">8/12</button>
+        <button (click)="updateTimespan(20170819)" class="active">8/19</button>
+    </div>
+    <div class="settlements__wrapper-table-header">
+        <span class="settlements__col-business"></span>
+        <span class="settlements__col-gross uppercase align-right heavy">Gross</span>
+        <span class="settlements__col-deductions uppercase align-right heavy">Deductions</span>
+        <span class="settlements__col-net uppercase align-right heavy">Net</span>
+        <span class="settlements__col-routes uppercase align-right heavy">Routes</span>
+        <span class="settlements__col-avg uppercase align-right heavy padding-right">Avg/route</span>
+    </div>
+
+    <div class="settlements__wrapper-contractors">
+        <div class="settlements__wrapper-contractor"
+            [class.active]="contractor.id === (activeContractor | async)"
+            (click)="setActiveContractor(contractor.id)" 
+            *ngFor="let contractor of (contractors | async); let i = index;">
+            <span class="settlements__col-business padding-left">{{ contractor.BusinessName }}</span>
+            <span class="settlements__col-gross align-right">{{ contractor.Gross | currency:'USD':true:'1.2' }}</span>
+            <span class="settlements__col-deductions align-right">{{ contractor.Deductions | currency:'USD':true:'1.2' }}</span>
+            <span class="settlements__col-net align-right">{{ contractor.Net | currency:'USD':true:'1.2' }}</span>
+            <span class="settlements__col-routes align-right">{{ contractor.RouteCount }}</span>
+            <span class="settlements__col-avg align-right padding-right">{{ (contractor.Gross / contractor.RouteCount) | currency:'USD':true:'1.2' }}</span>
+        </div>
+    </div>
+            
+    <div class="settlements__wrapper-details">
+        <ng-container *ngIf="(details | async) && !(detailsLoading | async); else loader">
+            <h2>Driver earnings</h2>
+            <ng-container *ngFor="let location of (details | async).Gross.Locations">
+                <div class="settlements__wrapper-location">
+                    <h3 class="details uppercase">{{ location.LocationName }}</h3>
+                    <ul>
+                        <li *ngFor="let driver of location.Drivers">
+                            <span class="item-description">{{ driver.DriverName }}</span>
+                            <span class="item-total">{{ driver.TotalEarnings | currency:'USD':true:'1.0-0' }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </ng-container>
+
+            <h2>Deductions</h2>
+            <ul>
+                <li *ngFor="let deduction of (details | async).Deductions.TruckDeductions">
+                    <span class="item-description">
+                        {{ deduction.DeductionType }}
+                        <i>{{ deduction.Explanation }}</i>
+                    </span>
+                    <span class="item-total">
+                        {{ deduction.DeductionAmount | currency:'USD':true:'1.0-0' }}
+                    </span>
+                </li>
+                <li *ngFor="let deduction of (details | async).Deductions.OtherDeductions">
+                        <span class="item-description">
+                            {{ deduction.DeductionType }}
+                            <i>{{ deduction.Explanation }}</i>
+                        </span>
+                        <span class="item-total">
+                            {{ deduction.DeductionAmount | currency:'USD':true:'1.0-0' }}
+                        </span>
+                </li>
+            </ul>
+
+            <h2>Payback details</h2>
+        </ng-container>
+
+        <ng-template #loader>
+            <div *ngIf="(detailsLoading | async)" style="margin-top: 156px;" class="align-center">
+                <div class="cp-spinner cp-eclipse"></div>
+            </div>
+        </ng-template>
+    </div>
+</div>
